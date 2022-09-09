@@ -1,27 +1,20 @@
-import * as React from "react";
-import { createSwitchNavigator, createAppContainer } from "react-navigation";
-
-import LoginScreen from "./screens/LoginScreen";
-import LoadingScreen from "./screens/LoadingScreen";
-import DashboardScreen from "./screens/DashboardScreen";
-
-/*import firebase from "firebase";
-import { firebaseConfig } from "./config";
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app();
-}*/
-
-const AppSwitchNavigator = createSwitchNavigator({
-  LoadingScreen: LoadingScreen,
-  LoginScreen: LoginScreen,
-  DashboardScreen: DashboardScreen
-});
-
-const AppNavigator = createAppContainer(AppSwitchNavigator);
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  return <AppNavigator />;
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
